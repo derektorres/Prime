@@ -38,6 +38,11 @@ public class Interfaz extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnOk.setText("OK");
+        btnOk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOkActionPerformed(evt);
+            }
+        });
 
         txtValue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +85,11 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void txtValueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtValueActionPerformed
         // TODO add your handling code here:
-         // 1 Agarrar el valor de la caja de texto 
+         // 1 Agarrar el valor de la caja de texto     
+    }//GEN-LAST:event_txtValueActionPerformed
+
+    private void btnOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOkActionPerformed
+        // TODO add your handling code here:
         String value = txtValue.getText();
         // 2 Invocar al método
         if(Palindromo.isPalindrome(value)){
@@ -89,7 +98,7 @@ public class Interfaz extends javax.swing.JFrame {
             lblresult.setText("No es palíndromo");
         }
         
-    }//GEN-LAST:event_txtValueActionPerformed
+    }//GEN-LAST:event_btnOkActionPerformed
 
     /**
      * @param args the command line arguments
