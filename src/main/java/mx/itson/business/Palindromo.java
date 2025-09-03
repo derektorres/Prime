@@ -62,8 +62,8 @@ public class Palindromo {
          Palindromo p = new Palindromo();
          
          String text = value.replaceAll("\\ ", "").toLowerCase();
-         char[] letras = text.toCharArray();
-         int count = letras.length;
+         
+         
          p.setIzquierdaDerecha(text);            
          p.setDerechaIzquierda(new StringBuilder(text).reverse().toString());
          if (p.getIzquierdaDerecha().equals(p.getDerechaIzquierda())){
